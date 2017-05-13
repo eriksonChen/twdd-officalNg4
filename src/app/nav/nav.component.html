@@ -1,0 +1,38 @@
+<!--選單-->
+<header>
+  <nav>
+    <a routerLink="/user">
+      <div class="logo">
+        <img alt="Brand" src="./assets/svg/logo.svg">
+        <span>台灣代駕</span>
+      </div>
+    </a>
+    <ul class="menu">
+      <li><a routerLinkActive="foucs" href="javascript:;" [routerLink]="['/user']">乘客</a></li>
+      <li><a href="javascript:;" routerLinkActive="foucs" [routerLink]="['/drive']">司機</a></li>
+      <li><a routerLinkActive="foucs" href="javascript:;" [routerLink]="['/about']">關於我們</a></li>
+      <li><a routerLinkActive="foucs" href="javascript:;" [routerLink]="['/partner']">合作夥伴</a></li>
+      <!--<li><a href="http://call.twdd.com.tw">電腦叫車</a></li>-->
+      <li><a routerLinkActive="foucs" href="javascript:;" [routerLink]="['/login']">登入</a></li>
+    </ul>
+
+    <div class="hamber" [ngClass]="{open: isOpen}" (click)="isOpen = !isOpen">
+      <div class="icon"></div>
+    </div>
+  </nav>
+  <!-- end .nav -->
+</header>
+<!-- end .header -->
+<!-- mobile meun -->
+<div class="mobile-menu" [ngClass]="{menu_open: isOpen}">
+  <ul>
+    <li routerLinkActive="foucs" ><a href="javascript:;" [routerLink]="['/user']" (click)="isOpen = !isOpen">乘客</a></li>
+    <li routerLinkActive="foucs" ><a href="javascript:;" [routerLink]="['/drive']" (click)="isOpen = !isOpen">司機</a></li>
+    <li routerLinkActive="foucs" ><a href="javascript:;" [routerLink]="['/about']" (click)="isOpen = !isOpen">關於我們</a></li>
+    <li routerLinkActive="foucs" ><a href="javascript:;" [routerLink]="['/partner']" (click)="isOpen = !isOpen">合作夥伴</a></li>
+    <!--<li><a href="http://call.twdd.com.tw"  (click)="isOpen = !isOpen">電腦叫車</a></li>-->
+    <li routerLinkActive="foucs" ><a href="javascript:;" [routerLink]="['/login']" (click)="isOpen = !isOpen">登入</a></li>
+  </ul>
+</div>
+<twdd-teach></twdd-teach>
+<!-- end .mobile-menu -->

@@ -1,0 +1,179 @@
+@import "./../../scss/color";
+@import "./../../scss/mixin";
+@import "./../../scss/media";
+
+header {
+  height: 80px;
+  background-color: #fff;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, .3);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  .logo {
+    float: left;
+    display: inline-flex;
+    cursor: pointer;
+    span {
+      color: $Blue;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 80px;
+      padding-left: 10px;
+    }
+    img {
+      width: 50px;
+    }
+  }
+  nav {
+    max-width: 1280px;
+    padding: 0 30px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    @include clearfix;
+    ul.menu {
+      display: inline-block;
+      position: relative;
+      letter-spacing: 1.5px;
+      float: right;
+      li {
+        float: left;
+        width: auto;
+        line-height: 40px;
+        margin: 20px 10px;
+        text-align: center;
+        @include ease(0.25s);
+        @media #{$med}{
+          margin-right: 0;
+          margin-left: 0;
+        }
+        a {
+          padding: 0px 25px;
+          color: $Blue;
+          @media #{$med} {
+            // padding: 0 10px;
+          }
+        }
+         :hover {
+          color: $lightBlue;
+        }
+        a.foucs {
+          color: #fff;
+          background-color: $Blue;
+        }
+      }
+    }
+    a {
+      float: left;
+      color: $textDark;
+      display: block;
+    }
+    @media #{$med} {
+      padding: 0 10px 0 20px;
+    }
+    @media #{$sml} {
+      padding: 0 1rem;
+      ul.menu,
+      {
+        display: none;
+      }
+    }
+  }
+}
+
+//手機的menu
+.hamber {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin: 25px 0;
+  top: 0;
+  right: 1rem;
+  cursor: pointer;
+  z-index: 8;
+  display: none;
+  @media #{$sml} {
+    display: block; // margin-top: 0.5rem;
+  }
+  .icon {
+    transition-duration: 0.2s;
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    top: 15px;
+    background-color: $textDark;
+    &:before {
+      transition-duration: 0.2s;
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: $textDark;
+      content: "";
+      top: -10px;
+    }
+    &:after {
+      transition-duration: 0.2s;
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: $textDark;
+      content: "";
+      top: 10px;
+    }
+  }
+}
+
+.hamber.open {
+  .icon {
+    transition-duration: 0.2s;
+    background: transparent;
+    &:before {
+      transform: rotateZ(45deg) scaleX(1.25) translate(6px, 6.5px);
+    }
+    &:after {
+      transform: rotateZ(-45deg) scaleX(1.25) translate(6.5px, -6.5px);
+    }
+  }
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  top: -120%;
+  background-color: $superLight;
+  padding: 2rem 0;
+  overflow-y: scroll; // letter-spacing: 2px;
+  @include ease(0.3s);
+  a {
+    color: $textDark;
+    font-weight: 600;
+  }
+  .foucs {
+    border-bottom: 1px solid $Blue;
+    a {
+      color: $Blue;
+    }
+  }
+  ul {
+    margin: 3rem 15% 0;
+    li {
+      line-height: 3.5;
+      font-size: 1.25rem;
+      border-bottom: 1px solid $textGray;
+    }
+    li:nth-last-child(1) {
+      border: 0;
+    }
+  }
+  @media #{$sml} {
+    display: block;
+  }
+}
+
+.menu_open{
+    top: 0;
+}

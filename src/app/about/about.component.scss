@@ -1,0 +1,79 @@
+@import "./../../scss/color";
+@import "./../../scss/media";
+.wrap{
+    .banner{
+        background-color: $sb;
+        height: 400px;
+        @media #{$sml}{
+            height: 250px;
+        }
+        .container{
+            height:100%;
+            display:flex;
+            @media #{$sml}{
+                display:block;
+            }
+
+            .pic{
+                flex-basis: 45%;
+                img{
+                    width: 400px;
+                }
+                @media #{$sml}{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 250px;
+                    opacity: 0.5;
+                    left: 50%;
+                    margin-left: -125px;
+                    img{
+                        width: 250px;
+                    }
+
+                }
+            }
+            .banner-cont{
+                flex-basis: 55%;
+                height: 100%;
+                display:flex;
+                z-index: 1;
+                position: relative;
+                h3{
+                    max-width: 570px;
+                    margin: auto 20px auto;
+                    
+                }
+            }
+        }
+        
+    }
+    section{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        @media #{$sml}{
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        .title-cont{
+            .btn-cont{
+                margin-left: 0;
+                @media #{$sml}{
+                    flex-wrap: wrap;
+
+                }
+                
+                .lg{
+                    width: 160px;
+                }
+                .btn{
+                    margin-bottom: 15px;
+                    @media #{$sml}{
+                        // flex-basis: 45%;//四個
+                        flex-basis: 32%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+<div class="wrap">
+  <section class="st-info">
+    <div class="container">
+      <!--.title-cont start-->
+      <div class="title-cont">
+        <!--title start-->
+        <div class="title tit-txt">
+          <h3>特約商店</h3>
+          <div class="des">
+            台灣代駕的特約商店都是經過挑選的好店家,在店家消費並使用代駕服務就可以得到折扣優惠
+          </div>
+        </div>
+        <!--title end-->
+      </div>
+      <!--title-con end-->
+      <!--store-cont start-->
+      <ul class="store-cont">
+        <li class="store" *ngFor="let store of stores">
+          <img [src]="store.pic" >
+        </li>
+      </ul>
+      <!--store-cont end-->
+    </div>
+  </section>
+  <div class="line"></div>
+  <section class="st-info" *ngIf="partners.length>0">
+    <div class="container con-line">
+      <!--.title-cont start-->
+      <div class="title-cont">
+        <!--title start-->
+        <div class="title tit-txt">
+          <h3>合作夥伴</h3>
+          <div class="des">
+            與台灣代駕合作的好夥伴
+          </div>
+        </div>
+        <!--title end-->
+      </div>
+      <!--title-con end-->
+      
+      <!--partner-cont start-->
+      <ul class="partner-cont">
+        <li *ngFor="let partner of partners">
+          <img [src]="partner.pic">
+        </li>
+      </ul>
+      <!--partner-cont end-->
+    </div>
+  </section>
+
+</div>

@@ -1,0 +1,27 @@
+@import "./../../scss/color";
+@import "./../../scss/media";
+.info-cont {
+  ul.info {
+    li {
+      padding: 25px 0;
+      line-height: 1.8;
+      @media #{$sml} {
+        padding: 15px 0;
+      }
+      h4 {
+        font-weight: bold;
+        line-height: 2;
+      }
+      .des, ul {
+        max-width: 900px;
+      }
+      ul{
+        li{
+          padding: 10px 0;
+          list-style: decimal;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

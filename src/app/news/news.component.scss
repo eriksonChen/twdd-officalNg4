@@ -1,0 +1,106 @@
+@import "./../../scss/color";
+@import "./../../scss/mixin";
+@import "./../../scss/media";
+.wrap {
+  section:nth-last-child(1){
+    @media #{$sml}{
+      border-top: 1px solid $lightGray;
+    }
+  }
+  .container {
+    @media #{$med} {
+      width: 90%;
+    }
+    @media #{$sml} {
+      width: 100%;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    
+    // .event-cont start
+    ul.event-cont {
+      display: flex;
+      flex-wrap: wrap;
+      @media #{$sml} {
+        display: block;
+      }
+      li {
+        flex-basis: 250px;
+        margin-right: 15px;
+        margin-bottom: 24px;
+        cursor: pointer;
+        @media #{$sml} {
+          width: 100%;
+          margin: 30px auto 30px;
+        }
+        .pic {
+          width: 250px;
+          height: 166px; 
+          border: 1px solid $lightGray;
+          overflow: hidden;
+          @include rounded(10px);
+          @include ease();
+          @media #{$sml} {
+            width: 100%;
+            max-width: 250px;
+            margin: 0 auto;
+          }
+          img {
+            width: 250px; 
+          }
+        }
+        .txt {
+          text-align: center;
+          line-height: 2.5;
+          color: #000;
+        }
+        &:hover {
+          .pic {
+            border-color: $lightBlue;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, .3);
+          }
+        }
+      }
+    } 
+    // .event-cont end
+
+    // .info-cont start
+    ul.info-cont {
+      li.news {
+        display: flex;
+        font-size: 1.125rem;
+        line-height: 2;
+        padding: 30px 0;
+        border-bottom: 1px solid $lightGray;
+        @media #{$sml} {
+          flex-direction: column;
+          line-height: 1.5;
+          padding: 15px 0;
+          font-size: 1rem;
+        }
+        .date {
+          margin-right: 10px;
+          color: $textGray;
+        }
+        .txt-cont {
+          .title {
+            cursor: pointer;
+            color: $Blue;
+            font-weight: bold;
+          }
+          .des {
+            margin-top: 10px;
+            line-height: 1.5;
+            display: none;
+          }
+          .open {
+            display: block;
+          }
+        }
+      }
+      li:nth-last-child(1) {
+        border: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+<div class="cont cont-form cont-form-login">
+
+  <div class="box select">
+
+    <div class="title">1. 選擇說明會日期</div>
+    <h4 class="notime" *ngIf="items.length === 0">目前無任何說明會行程，若想預約您可以電話聯絡或來信詢問</h4>
+    <!--days start-->
+    <div class="days-cont" *ngIf="items.length > 0">
+      <div class="day" *ngFor="let item of items">
+        <label>
+          <input type="radio" name="optionsRadios" [value]="item.no" [disabled]="item.type=='red'" [(ngModel)]="num" (click)="changeNo(item.no)">
+        </label>
+        <div class="date">
+          <div class="day-title">{{item.area}} {{item.date}}<span [class]="item.type">{{item.type=="red" ? "額滿" : "即將額滿"}}</span></div>
+          <div class="tab">{{item.time}}</div>
+          <div class="add">{{item.add}}</div>
+        </div>
+      </div>
+
+    </div>
+    <!--days end-->
+  </div>
+
+  <div class="box myform">
+    <div class="title form-title">
+      2. 輸入聯絡資料
+    </div>
+    <form role="form" [formGroup]="form" (submit)="onSubmit()">
+      <div class="form-group form-group-lg col-xs-12">
+        <label for="name">姓名</label>
+        <input type="text" class="form-control" formControlName="name" placeholder="請輸入正確姓名">
+        <div class="errors" *ngIf="name.invalid && name.touched">
+          姓名必填
+        </div>
+      </div>
+
+      <div class="form-group form-group-lg col-xs-12">
+        <label for="cell">聯絡電話</label>
+        <input type="text" class="form-control" formControlName="phone" pattern="09[0-9]{8}" maxlength="10" placeholder="請輸入您的手機號碼">
+        <div class="errors" *ngIf="phone.invalid && phone.touched">
+          請輸正確的手機號碼
+        </div>
+      </div>
+      <div class="form-group form-group-lg col-xs-12">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" formControlName="email">
+        <div class="errors" *ngIf="email.invalid && email.touched">
+          請填寫正確email
+        </div>
+      </div>
+      <div class="form-group form-group-lg col-xs-12">
+        <label for="id">身份證</label>
+        <input type="text" class="form-control uppercase" maxlength="10" pattern="^[A-Za-z]\d{9}$" formControlName="id">
+        <div class="errors" *ngIf="id.invalid && id.touched">
+          請填寫身份證
+        </div>
+      </div>
+      <div class="form-group form-group-lg col-xs-12">
+        <label for="code">推薦序號</label>
+        <input type="text" class="form-control" formControlName="code">
+      </div>
+      <!--<button type="submit" class="submit-btn">即刻報名</button>-->
+      <button type="submit" class="submit-btn" [disabled]="form.invalid || items.length === 0">即刻報名</button>
+    </form>
+
+    <!--{{form.valid}}-->
+  </div>
+</div>

@@ -1,0 +1,30 @@
+@import "./../../scss/color";
+@import "./../../scss/media";
+.wrap {
+  .container {
+    ul {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      @media #{$sml} {
+        justify-content: space-around;
+      }
+      li {
+        overflow: hidden;
+        border: 1px solid $lightGray;
+        flex-basis: 160px;
+        margin: 0 40px 20px 0;
+        line-height: 0;
+        @media #{$med} {
+          margin-right: 20px;
+        }
+        @media #{$sml} {
+          margin: 0 5px 20px;
+        }
+        img {
+          width: 160px;
+        }
+      }
+    }
+  }
+}

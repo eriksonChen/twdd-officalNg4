@@ -1,0 +1,19 @@
+{
+  "data": [{
+    "title":"新手登入",
+    "des":"現在就加入我們<br>成為創業夥伴",
+    "pic":"./assets/svg/person2.svg",
+    "btn":"新手登入",
+    "txt1":"還沒有帳號？",
+    "txt2":"歡迎來電洽詢",
+    "url":"http://new.twdd.com.tw/auth/login"
+  },{
+    "title":"夥伴登入",
+    "des":"台灣代駕創業夥伴<br>歡迎您回來",
+    "pic":"./assets/svg/person1.svg",
+    "btn":"夥伴登入",
+    "txt1":"",
+    "txt2":"",
+    "url":"http://d.twdd.com.tw/auth/login"
+  }]
+}

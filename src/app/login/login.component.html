@@ -1,0 +1,26 @@
+<div class="wrap">
+  <section class="sl">
+    <div class="container container-lg">
+      <!--.title-cont start-->
+      <div class="title-cont title-cont-btn">
+        <!--title start-->
+        <div class="title tit-pic">
+          <div class="pic"><img src="./assets/svg/login.svg" alt="login"></div>
+          <h3>夥伴登入</h3>
+        </div>
+        <!--title end-->
+        <!--.btn-cont start-->
+        <div class="btn-cont">
+          <button class="btn" routerLinkActive="foucs" [routerLink]="['/login/tiro']">新手登入</button>
+          <button class="btn" routerLinkActive="foucs" [routerLink]="['/login/expert']">夥伴登入</button>
+        </div>
+        <!--.btn-cont end-->
+      </div>
+      <!--.title-cont end-->
+
+      <router-outlet></router-outlet>
+
+    </div>
+  </section>
+
+</div>

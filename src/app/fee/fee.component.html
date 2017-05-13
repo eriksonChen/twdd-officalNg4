@@ -1,0 +1,58 @@
+<div class="wrap">
+  <section class="sl">
+    <div class="container">
+      <!--.title-cont start-->
+      <div class="title-cont">
+        <!--title start-->
+        <div class="title tit-txt">
+          <h3>費用試算</h3>
+          <div class="des">
+            輸入起點終點計算各時段代駕費用
+          </div>
+        </div>
+        <!--title end-->
+      </div>
+      <!--title-con end-->
+
+      <div class="cont cont-form">
+        <div class="box myform">
+          <div class="title form-title">
+            1. 填入代駕時段及起點終點
+          </div>
+          <form role="form" [formGroup]="form" (submit)="onSubmit()">
+            <div class="form-group form-group-lg col-xs-12">
+              <label for="myname">開車時段</label>
+              <!--<input type="text" class="form-control" id="myname" placeholder="請輸入正確姓名">-->
+              <select class="form-control" id="time" formControlName="time">
+                <option>07:00~21:59</option>
+                <option>22:00~23:59</option>
+                <option>00:00~06:59</option>
+              </select>
+            </div>
+            <div class="form-group form-group-lg col-xs-12">
+              <label for="Addr">起點</label>
+              <input type="text" class="form-control" id="start_add" formControlName="start_add" placeholder="請填寫正確地址">
+              <div class="errors" *ngIf="start_add.invalid && start_add.touched">此欄位必填</div>
+            </div>
+            <div class="form-group form-group-lg col-xs-12">
+              <label for="mydate">終點</label>
+              <input type="text" class="form-control" id="end_add" formControlName="end_add" placeholder="請填寫正確地址">
+              <div class="errors" *ngIf="end_add.invalid && end_add.touched">此欄位必填</div>
+            </div>
+            <button type="submit" class="submit-btn" [disabled]="form.invalid">計算費用</button>
+          </form>
+        </div>
+        <div class="box box-right">
+          <div class="title">2.試算結果</div>
+          <div class="pic"><img src="./assets/img/money.png" alt=""></div>
+          <div class="price">${{fee}} <span>元</span></div>
+          <ul>
+            <li>累計里程計費，超過10公里，每1公里加收50元；行駛超過30公里後，每2公里加收50元。</li>
+            <li>不同時段代駕起步價以車輛出發時間為準。</li>
+            <li>預約時間前抵達客戶位置，從預約時間起算；預約時間後抵達客戶位置，從司機到達時間起算，累計每滿30分鐘收100元等候費，不滿30分鐘不收費。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

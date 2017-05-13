@@ -1,0 +1,372 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    text-decoration: none;
+}
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a:hover, a:active, a:link, a:visited{
+  text-decoration: none;
+}
+
+@import "./scss/typography";
+@import "./scss/color";
+@import "./scss/mixin";
+@import "./scss/media";
+
+.wrap {
+  margin: 80px auto 0;
+  position: relative;
+  section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @media #{$sml}{
+      section{
+          padding-top: 45px;
+          padding-bottom: 45px;
+      }
+  }
+  section.st-info {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    @media #{$sml} {
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+  }
+
+  section.sl{
+    padding-top: 50px;
+  }
+
+
+  section.sml-gray{
+    @media #{$sml}{
+      background-color: $superLight;
+    }
+  }
+
+  .container {
+    &.container-lg{
+      @media #{$med} {
+        width: 100%;
+      }
+    }
+    
+    h2 {
+      text-align: center;
+      font-weight: bold;
+    }
+    .cont {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      align-items: center;
+      @media #{$med} {
+        padding-top: 40px;
+      }
+      @media #{$sml} {
+        padding-top: 20px;
+      }
+      .map {
+        line-height: 0;
+        text-align: center;
+      }
+      .box {
+        flex-basis: 48%;
+        padding-right: 40px;
+        padding-left: 40px;
+        @media #{$med} {
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+        @media #{$sml} {
+          padding: 0;
+        }
+        .title {
+          font-size: 1.5rem;
+          font-weight: bold;
+          @media #{$med} {
+            font-size: 1.25rem;
+          }
+        }
+      }
+      
+    }
+    //有表格cont
+    .cont-form {
+      justify-content: space-between;
+      
+      .errors{
+        color: red;
+        font-size: 0.875rem;
+      }
+      input.ng-invalid.ng-touched{
+        border-left: 3px solid red;
+      }
+      input.ng-valid.ng-touched{
+        border-left: 3px solid forestgreen;
+      }
+      
+      @media #{$sml} {
+        display: block;
+      }
+      .box {
+        padding: 20px;
+        @media #{$sml}{
+          padding: 10px;
+        }
+        .title{
+            margin-bottom: 20px;
+            @media #{$sml}{
+                text-align: center;
+            }
+        }
+      }
+      .myform {
+        background-color: $sb;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        @include rounded();
+        .form-title {
+            margin-left: 15px;
+            @media #{$sml}{
+              margin-left: 0;
+            }
+        }
+        @media #{$sml} {
+          padding-left: 0;
+          padding-right: 0;
+          
+        }
+        form {
+          @media #{$sml} {
+            display: flex;
+            flex-direction: column;
+          }
+          .form-group {
+            label {
+              font-size: 0.875rem;
+              color: $textGray;
+              line-height: 2;
+            }
+          }
+        }
+        .submit-btn {
+          @include btnStyle(200px, #fff, $Blue, $Blue, inherit);
+          margin: 20px 15px;
+          @media #{$sml} {
+            margin: 15px auto;
+          }
+        }
+      }
+    }
+
+    // login 表格
+    .cont-form-login {
+      justify-content: space-around;
+      .myform {
+        flex-basis: 450px;
+        .forget{
+            color: $textGray;
+            text-align: right;
+            padding-right: 15px;
+        }
+        .tab{
+            color: $textDark;
+            padding-left: 15px;
+            @media #{$sml}{
+                text-align: center;
+                padding-left: 0;
+            }
+            .black{
+                color: #000;
+                font-weight: bold;
+            }
+            .red{
+              color: red;
+              font-weight: bold;
+            }
+        }
+
+      }
+      .title {
+        font-size: 1.5rem;
+        
+        @media #{$sml} {
+          margin-left: 0;
+        }
+      }
+      .box-left {
+        flex-basis: 40%;
+        text-align: center;
+        @media #{$sml} {
+          padding-right: 0;
+          padding-left: 0;
+        }
+        .pic {
+          width: 125px;
+          margin: 0 auto;
+          img {
+            width: 100%;
+          }
+        }
+        h4{
+            font-size: 1.875rem;
+            line-height: 2;
+            font-weight: bold;
+        }
+        .txt{
+            font-size: 1.25rem;
+            color: $textDark;
+        }
+      }
+    }
+
+    .title-cont {
+      margin-bottom: 40px;
+      display: flex;
+      @media #{$sml} {
+        justify-content: center;
+        margin-bottom: 30px;
+      }
+      .title {
+        h3 {
+          font-weight: bold;
+        }
+        .pic {
+          margin-right: 20px;
+          width: 70px;
+          @media #{$sml} {
+            display: none;
+            width: 60px;
+            margin-right: 10px;
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .tit-pic {
+        display: flex;
+        align-items: center;
+      }
+      .tit-txt {
+        line-height: 1.8;
+        @media #{$sml} {
+          text-align: center;
+          padding: 0 20px;
+          h3 {
+            font-weight: bold;
+          }
+        }
+      }
+      .btn-cont {
+        margin-left: 50px;
+        @media #{$sml} {
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          margin-left: 0;
+          margin-top: 20px;
+        }
+        button.btn {
+          @include btnStyle(140px, $Blue, #fff, inherit, $Blue);
+          border-color: $Blue;
+          line-height: inherit;
+          margin-right: 15px;
+          @media #{$sml} {
+            font-size: 14px; //   width: 120px;
+            flex-basis: 45%;
+            margin-right: 0;
+          }
+        }
+        button.foucs {
+          background-color: $Blue;
+          color: #fff;
+        }
+      }
+    } // .title-cont end
+    .title-cont-btn {
+      align-items: center;
+      @media #{$sml} {
+        flex-direction: column;
+      }
+    } // info-cont
+    .info-cont {
+      background-color: $superLight;
+      padding: 0 40px;
+      @include rounded();
+      @media #{$sml} {
+        padding: 0 15px;
+      }
+
+      .info{
+        padding: 10px 0 30px;
+      }
+    }
+  }
+
+
+  .con-line {
+    border-top: 1px solid $lightGray;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+}

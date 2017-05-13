@@ -1,0 +1,31 @@
+<div class="wrap">
+  <!--banner start-->
+  <div class="banner">
+    <div class="container">
+      <div class="banner-cont">
+        <h3>台灣代駕致力於提供更好的服務，讓您和您的車輛都能安全的回家。</h3>
+      </div>
+      <div class="pic"><img src="./assets/img/about.png" alt=""></div>
+    </div>
+  </div>
+  <!--banner end-->
+
+  <section>
+    <div class="container">
+      <!--.title-cont start-->
+      <div class="title-cont title-cont-btn">        
+        <!--.btn-cont start-->
+        <div class="btn-cont">
+          <button class="btn" routerLinkActive="foucs" [routerLink]="['/about/purposes']">服務宗旨</button>
+          <button class="btn" routerLinkActive="foucs" [routerLink]="['/about/note']">服務條款</button>
+          <button class="btn" routerLinkActive="foucs" [routerLink]="['/about/privacy']">隱私權政策</button>
+          <!--<button class="btn lg" routerLinkActive="foucs" [routerLink]="['/about/insure']">代駕責任保險</button>-->
+        </div>
+        <!--.btn-cont end-->
+      </div>
+      <!--.title-cont end-->
+      <router-outlet></router-outlet>
+
+    </div>
+  </section>
+</div>

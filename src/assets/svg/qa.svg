@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="136px" height="117px" viewBox="0 0 136 117" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>svg/qa</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M60.0819672,35.2368851 C60.0819672,29.7190173 64.5531374,25.2459016 70.0737021,25.2459016 L123.329095,25.2459016 C128.847378,25.2459016 133.32083,29.7131662 133.32083,35.2368851 L133.32083,79.8774444 C133.32083,85.3953122 128.844185,89.8684279 123.316349,89.8684279 L116.778305,89.8684279 L121.605115,115 L92.3649954,89.8684279 L70.0754339,89.8684279 C64.5561947,89.8684279 60.0819672,85.4011633 60.0819672,79.8774444 L60.0819672,35.2368851 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="73.2388631" height="89.7540984" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="qa" transform="translate(2.000000, 2.000000)">
+            <g id="svg/qa">
+                <use id="Rectangle-9" stroke="#5B5B5B" mask="url(#mask-2)" stroke-width="6" xlink:href="#path-1"></use>
+                <path d="M0.736420572,10.5735325 C0.736420572,5.05081646 5.20991758,0.573770492 10.7293498,0.573770492 L69.4872943,0.573770492 C75.0062367,0.573770492 79.4802235,5.04479228 79.4802235,10.5735325 L79.4802235,58.7165395 C79.4802235,64.2392556 74.9944209,68.7163016 69.4808597,68.7163016 L49.9447504,68.7163016 L18.4906875,97.8754217 L23.0514894,68.7163016 L10.7353874,68.7163016 C5.2131105,68.7163016 0.736420572,64.2452798 0.736420572,58.7165395 L0.736420572,10.5735325 Z" id="q" stroke="#FFFFFF" stroke-width="4" fill="#5B5B5B"></path>
+                <text id="Q" font-family="LucidaGrande-Bold, Lucida Grande" font-size="30" font-weight="bold" letter-spacing="3.75" fill="#FFFFFF">
+                    <tspan x="28.2280594" y="43.7704918">Q</tspan>
+                </text>
+                <text id="A" font-family="LucidaGrande-Bold, Lucida Grande" font-size="32" font-weight="bold" letter-spacing="4" fill="#5B5B5B">
+                    <tspan x="84.0548156" y="69.3114754">A</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

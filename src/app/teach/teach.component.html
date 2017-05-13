@@ -1,0 +1,46 @@
+<div class="popup">
+  <div id="pop-cont" class="pop-cont">
+
+    <div class="pop-close" (click)='closeBtn()'>
+      <img src="./assets/svg/close.svg">
+    </div>
+
+    <ul class="teach">
+      <li>
+        <div class="pic"><img src="./assets/img/phone.png"></div>
+        <div class="text">
+          <h3 class="title">1. 確認您的所在位置</h3>
+          <div class="des">
+            啟動APP後，畫面會直接進入此首頁畫面，您可直接確認目前地址或拖曳大頭針微調後點擊黑色確認鍵，或是在上方欄位輸入您的正確地址後確認送出。
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="pic"><img src="./assets/img/phone-2.png"></div>
+        <div class="text">
+          <h3 class="title">2. 直接完成代駕呼叫</h3>
+          <div class="des">
+            點選呼叫鍵就可以直接送出呼叫任務，若您持有優惠也可在送出任務前填寫優惠序號，取得折扣，也可在此頁進行費用試算。
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="pic"><img src="./assets/img/phone-3.png"></div>
+        <div class="text">
+          <h3 class="title">3. 或選取範圍內司機呼叫</h3>
+          <div class="des">
+            若您希望自選提供您代駕服務的司機，也可以參考我們提供給您的資訊選取範圍內的優良駕駛。
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="pages">
+      <div class="dot" [class.active]="type==1" (click)="page(1)"></div>
+      <div class="dot" [class.active]="type==2" (click)="page(2)"></div>
+      <div class="dot" [class.active]="type==3" (click)="page(3)"></div>
+    </div>
+
+  </div>
+  <div class="pop-bg" (click)="closeBtn()"></div>
+</div>

@@ -1,0 +1,26 @@
+<div class="wrap">
+  <section class="st-info">
+    <div class="container">
+      <!--.title-cont start-->
+      <div class="title-cont title-cont-btn">
+        <!--title start-->
+        <div class="title tit-pic">
+          <div class="pic"><img src="./assets/svg/people.svg" alt="夥伴招募"></div>
+          <h3>夥伴招募</h3>
+        </div>
+        <!--title end-->
+
+        <div class="btn-cont">
+          <button class="btn" routerLinkActive="foucs" [routerLink]="['/drive/recruit/method']">合作模式</button>
+          <button class="btn" routerLinkActive="foucs" [routerLink]="['/drive/recruit/process']">招募流程</button>
+          <button class="btn" routerLinkActive="foucs" [routerLink]="['/drive/recruit/orientation']">報名說明會</button>
+        </div>
+        <!--.btn-cont end-->
+      </div>
+
+      <router-outlet></router-outlet>
+
+    </div>
+  </section>
+
+</div>

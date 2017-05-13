@@ -1,0 +1,10 @@
+<!--.info-cont start-->
+<div class="info-cont">
+  <ul class="qa">
+    <li *ngFor="let qa of qas">{{qa.title}}
+      <div class="des" [innerHTML]="qa.des">
+      </div>
+    </li>
+  </ul>
+</div>
+<!--.info-cont end-->

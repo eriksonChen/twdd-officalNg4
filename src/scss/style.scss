@@ -1,0 +1,431 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    text-decoration: none;
+}
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a:hover, a:active, a:link, a:visited{
+  text-decoration: none;
+}
+
+@import "typography";
+@import "color";
+@import "mixin";
+@import "media";
+
+
+
+
+
+// nav#nav {
+//   height: 80px;
+//   // background-color: #fff;
+//   color: $Blue;
+//   box-shadow: 0px 1px 4px rgba(0, 0, 0, .3);
+//   background-color: #fff;
+//   border: 0;
+  
+//   &.navbar{
+//     margin-bottom: 0;
+//   }
+//   .logo{
+//     float:left;
+//     display: inline-flex;
+//     cursor: pointer;
+//     @media #{$sml}{
+//       margin-left: 20px;
+//     }
+//     span {
+//       font-weight: bold;
+//       font-size: 28px;
+//       line-height: 80px;
+//       padding-left: 10px;
+//     }
+    
+//     img {
+//       width: 50px;
+//     }
+//   }
+//   .navbar-header{
+//     button.navbar-toggle{
+//       margin: 14px 25px;
+//       border: 0;
+//       &:hover{
+//         background-color: #fff;
+//       }
+//     }
+//     .icon-bar{
+//       background-color: #000;
+//       width: 30px;
+//       margin: 7px 0;
+//     }
+//   }
+
+//   .navbar-collapse{
+//     text-align: center;
+//     background-color: #fff;
+//     border-color: $lightGray;
+//     #navbar {
+//       li {
+//         letter-spacing: 1.5px;
+//         cursor: pointer;
+//         padding: 0px 25px;
+//         margin: 20px 0;
+//         @media #{$med}{
+//           padding-left: 10px;
+//           padding-right: 10px;
+//         }
+//         a{
+//           color: $Blue;
+//           padding-top: 10px;
+//           padding-bottom: 10px;
+//         }
+//         &:hover {
+//           background-color: $lightBlue;
+//           // color: #fff;
+//           a{
+//             color: #fff;
+//           }
+//         }
+
+        
+//       }
+//     }
+//   }
+  
+// }
+
+header {
+    height: 80px;
+    background-color: #fff;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, .3);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    .logo{
+      float:left;
+      display: inline-flex;
+      cursor: pointer;
+     
+      span {
+        color: $Blue;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 80px;
+        padding-left: 10px;
+      }
+      
+      img {
+        width: 50px;
+      }
+    }
+    nav {
+        max-width: 1280px;
+        padding: 0 30px;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        @include clearfix;
+        
+        ul.menu {
+            display: inline-block;
+            position: relative;
+            letter-spacing: 1.5px;
+            float: right;
+            li {
+                float: left;
+                font-weight: 600;
+                width: auto;
+                
+                line-height: 40px;
+                margin: 20px 0;
+                text-align: center;
+                @include ease(0.25s);
+
+                a{
+                  padding: 0px 30px;
+                  color: $Blue;
+
+                  @media #{$med}{
+                    padding: 0 25px;
+                  }
+
+                }
+                :hover {
+                    color: $lightBlue;
+                }
+                a.foucs {
+                    color: #fff;
+                    background-color: $Blue;
+                }
+            }
+        }
+        a {
+            color: $textDark;
+            display: block;
+        }
+
+        @media #{$med}{
+          padding: 0 10px 0 20px;
+        }
+        
+        @media #{$sml} {
+            padding: 0 1rem;
+            ul.menu,{
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+//手機的menu
+.hamber {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin: 25px 0;
+    top: 0;
+    right: 1rem;
+    cursor: pointer;
+    z-index: 8;
+    display: none;
+    @media #{$sml} {
+        display: block;
+        // margin-top: 0.5rem;
+    }
+    .icon {
+        transition-duration: 0.2s;
+        position: absolute;
+        height: 3px;
+        width: 30px;
+        top: 15px;
+        background-color: $textDark;
+        &:before {
+            transition-duration: 0.2s;
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            background-color: $textDark;
+            content: "";
+            top: -10px;
+        }
+        &:after {
+            transition-duration: 0.2s;
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            background-color: $textDark;
+            content: "";
+            top: 10px;
+        }
+    }
+}
+
+.hamber.open {
+    .icon {
+        transition-duration: 0.2s;
+        background: transparent;
+        &:before {
+            transform: rotateZ(45deg) scaleX(1.25) translate(6px, 6.5px);
+        }
+        &:after {
+            transform: rotateZ(-45deg) scaleX(1.25) translate(6.5px, -6.5px);
+        }
+    }
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    top: -120%;
+    background-color: $superLight;
+    padding: 2rem 0;
+    overflow-y: scroll;
+    // letter-spacing: 2px;
+    a {
+        color: $textDark;
+        font-weight: 600;
+    }
+    .foucs {
+        border-bottom: 1px solid $Blue;
+        a{
+            color: $Blue;
+        }
+    }
+    ul {
+        margin: 3rem 15% 0;
+        li {
+            line-height: 3.5;
+            font-size: 1.25rem;
+            border-bottom: 1px solid $textGray;
+        }
+        li:nth-last-child(1){
+            border:0;
+        }
+    }
+    @media #{$sml} {
+        display: block;
+    }
+}
+
+
+
+
+.wrap {
+  margin: 80px auto 0;
+  position: relative;
+  section {
+    padding-top: 70px;
+    padding-bottom: 90px;
+    .container {
+      h2 {
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+  }
+  @media #{$sml}{
+      section{
+          padding-top: 45px;
+          padding-bottom: 45px;
+      }
+  }
+}
+
+footer {
+  background-color: $Blue;
+  color: #fff;
+  @media #{$sml}{
+      padding-left: 30px;
+      padding-right: 30px;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    flex-wrap: wrap;
+
+    @media #{$sml}{
+        justify-content: center;
+    }
+    a {
+      color: #fff;
+    }
+    .item {
+        flex: 1;
+        @media #{$sml} {
+            flex-basis: 50%;
+            font-size: 14px;
+        }
+        .title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            line-height: 3;
+            @media #{$sml}{
+                font-size: 1.15rem;
+            }
+        }
+        ul {
+            li {
+                line-height: 2;
+            }
+        }
+    }
+    .qrcode {
+        text-align: center;
+        @media #{$sml} {
+            flex-basis: 100%;
+            margin-top: 30px;
+            .title, .pic{
+                display: none;
+            }
+        }
+        .pic {
+            margin: 0 auto;
+            width: 100px;
+            img {
+                width: 100%;
+            }
+        }
+        .btns{
+            @include btnStyle(200px, #fff, #fff, inherit, $Blue);
+            margin: 10px auto;
+            display:none;
+            @media #{$sml}{
+                display: block;
+            }
+        }
+    }
+    .item:nth-child(1){
+        flex: 1.5;
+        @media #{$med}{
+            flex:2;
+        }
+        @media #{$sml}{
+            flex-basis: 100%;
+            padding-bottom: 20px;
+        }
+    }
+  }
+}

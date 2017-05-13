@@ -1,0 +1,28 @@
+<div class="cont cont-form cont-form-login">
+  <div class="box box-left">
+    <div class="pic"><img [src]="type.pic" alt=""></div>
+    <h4>{{type.title}}</h4>
+    <div class="txt" [innerHTML]="type.des">
+      現在就加入我們<br>成為創業夥伴
+    </div>
+  </div>
+  <div class="box myform">
+    <div class="title form-title">
+      請輸入您的帳號及密碼
+    </div>
+    <form name="loginform" role="form" (ngSubmit)="onSubmit()" [action]="type.url" method="post">
+      <div class="form-group form-group-lg col-xs-12">
+        <label for="cell">帳號</label>
+        <input type="text" class="form-control" id="email" name="email" [(ngModel)]="user.email" pattern="09[0-9]{8}" maxlength="10" placeholder="請輸入手機號碼" required>
+      </div>
+
+      <div class="form-group form-group-lg col-xs-12">
+        <label for="ps">密碼</label>
+        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password" required>
+      </div>
+      <div class="forget"><a href="javascript:;">忘記密碼?</a></div>
+      <button type="submit" class="submit-btn">新手登入</button>
+      <div class="tab">{{type.txt1}} <span class="black">{{type.txt2}}</span></div>
+    </form>
+  </div>
+</div>

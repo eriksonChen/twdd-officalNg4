@@ -1,0 +1,81 @@
+@import "./../../scss/color";
+@import "./../../scss/mixin";
+@import "./../../scss/media";
+
+footer {
+  background-color: $lightBlue;
+  color: #fff;
+  @media #{$sml}{
+      padding-left: 30px;
+      padding-right: 30px;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    flex-wrap: wrap;
+
+    @media #{$sml}{
+        justify-content: center;
+    }
+    a {
+      color: #fff;
+    }
+    .item {
+        flex: 1;
+        @media #{$sml} {
+            flex-basis: 50%;
+            font-size: 14px;
+        }
+        .title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            line-height: 3;
+            @media #{$sml}{
+                font-size: 1.15rem;
+            }
+        }
+        ul {
+            li {
+                line-height: 2;
+            }
+        }
+    }
+    .qrcode {
+        text-align: center;
+        @media #{$sml} {
+            flex-basis: 100%;
+            margin-top: 30px;
+            .title, .pic{
+                display: none;
+            }
+        }
+        .pic {
+            margin: 0 auto;
+            width: 100px;
+            img {
+                width: 100%;
+            }
+        }
+        .btns{
+            @include btnStyle(200px, #fff, #fff, inherit, $Blue);
+            margin: 10px auto;
+            display:none;
+            @media #{$sml}{
+                display: block;
+            }
+        }
+    }
+    .item:nth-child(1){
+        flex: 1.5;
+        @media #{$med}{
+            flex:2;
+        }
+        @media #{$sml}{
+            flex-basis: 100%;
+            padding-bottom: 20px;
+        }
+    }
+  }
+}

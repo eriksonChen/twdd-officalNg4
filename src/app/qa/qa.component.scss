@@ -1,0 +1,15 @@
+@import "./../../scss/color";
+@import "./../../scss/mixin";
+@import "./../../scss/media";
+
+.wrap {
+  .container {
+    @media #{$med} {
+      width: 90%;
+    }
+    @media #{$sml} {
+      width: 100%;
+    }
+    
+  }
+}

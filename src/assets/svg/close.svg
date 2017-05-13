@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>svg/close</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="乘客首頁" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="USER04" transform="translate(-1130.000000, -880.000000)" fill="#4A4A4A">
+            <g id="popup" transform="translate(240.000000, 860.000000)">
+                <g id="svg/close" transform="translate(890.000000, 20.000000)">
+                    <path d="M25,0 C11.25,0 0,11.25 0,25 C0,38.75 11.25,50 25,50 C38.75,50 50,38.75 50,25 C50,11.25 38.75,0 25,0 L25,0 Z M37.5,34 L34,37.5 L25,28.5 L16,37.5 L12.5,34 L21.5,25 L12.5,16 L16,12.5 L25,21.5 L34,12.5 L37.5,16 L28.5,25 L37.5,34 L37.5,34 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

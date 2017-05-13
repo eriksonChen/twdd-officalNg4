@@ -1,0 +1,145 @@
+@import "typography";
+@import "color";
+@import "mixin";
+@import "media";
+
+.wrap{
+    .st1, .st2, .st4{
+        .cont{
+            width: 100%;
+            padding-top: 70px;
+            display: flex;
+            justify-content:center;
+            position: relative;
+            .map{
+                line-height: 0;
+                text-align: center;
+            }
+            .box{
+                width: 48%;
+                padding-right: 40px;
+                padding-left: 40px;
+                .title{
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+            }
+            
+        }
+    }
+
+    .st1{
+        background-color: $sb;
+        padding-bottom: 0;
+        .box{
+            font-size: 1.125rem;
+            li{
+                margin: 0 20px;
+                padding: 25px 0;
+                display: inline-block;
+                .title{
+                    border-bottom: 2px solid $Blue;
+                    display: inline-block;
+                }
+                .des{
+                    margin-top: 15px;
+                    line-height: 2;
+                }
+            }
+
+            li:nth-child(1){
+                border-bottom: 1px solid $textGray;
+            }
+
+                
+            }
+    }
+
+    .st2{
+        .ex{
+            width: 450px;
+            img{
+                width: 100%;
+            }
+        }
+        .box{
+            ul{
+                margin-top: 42px;
+                li{
+                    margin-left: 20px;
+                    line-height: 2;
+                    list-style-type: decimal;
+                }
+            }
+        }
+
+    }
+
+    .st3{
+        background-color: $superLight;
+        .des{
+            font-size: 1.25rem;
+            text-align: center;
+            padding: 30px 0 0;
+            margin: 0 auto;
+            width: 70%;
+            font-weight: normal;
+        }
+        .blue-text{
+            color: $Blue;
+            font-weight: bold;
+        }
+        
+
+    }
+
+    .st4{
+        .cont{
+            .box{
+                .title, .des, ul{
+                    margin-bottom: 20px;
+                    margin-left: 15px;
+                }
+                
+                ul{
+                    li{
+                        list-style-type: decimal;
+                        margin-left: 20px;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .des, ul{
+                    width: 420px;
+                    text-align: justify;
+                    line-height: 1.5;
+                }
+                
+            }
+            .myform{
+                padding: 20px;
+                background-color: $sb;
+                @include rounded();
+
+                .title{
+                    
+                }
+                form{
+                    .form-group{
+                        label{
+                            font-size: 0.875rem;
+                            color: $textGray;
+                            line-height: 2;
+                        }
+                    }
+                    
+                }
+                .submit-btn{
+                    @include btnStyle(200px, #fff, $Blue, $Blue, inherit);
+                    margin: 20px 15px;
+                }
+            }
+        }
+    }
+
+}

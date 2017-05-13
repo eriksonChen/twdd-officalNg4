@@ -1,0 +1,49 @@
+@import "./../../scss/color";
+@import "./../../scss/media";
+@import "./../../scss/mixin";
+.info {
+  .bold {
+    font-weight: bold;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $lightGray;
+    padding: 40px 0 50px;
+    line-height: 1.8;
+    @media #{$sml}{
+        flex-direction: column;
+    }
+    .step {
+      width: 60px;
+      height: 60px;
+      background-color: $textGray;
+      color: #fff;
+      @include rounded(100%);
+      text-align: center;
+      line-height: 60px;
+      margin-right: 20px;
+      display: block;
+      @media #{$sml}{
+          margin-right: 0;
+          margin-bottom: 20px;
+      }
+    }
+    .txt {
+      flex-basis: 80%;
+    }
+    .title {
+      font-size: 1.5rem;
+      @media #{$sml}{
+          text-align: center;
+      }
+    }
+    .des {
+      padding-top: 16px;
+      max-width: 840px;
+    }
+  }
+  li:nth-last-child(1) {
+    border: 0;
+  }
+}

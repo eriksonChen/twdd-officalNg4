@@ -1,0 +1,178 @@
+<div class="wrap">
+    <!--banner start-->
+    <!--<div class="banner">
+    <div class="banner-cont">
+      <div class="bg">
+        <img src="./assets/img/banner.jpg">
+      </div>
+      <div class="container">
+        <h1>多一次代駕<span>，</span>少一次酒駕</h1>
+        <h4>提供全國最專業、有效率的代駕服務<br>台灣第一家，助您平安醉到家
+        </h4>
+        <div class="btns" (click)="downloadApp()">立即下載APP <i class="material-icons">arrow_forward</i></div>
+        <p class="tab">Iphone / Android</p>
+      </div>
+    </div>
+  </div>-->
+    <!--banner end-->
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="banner carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" [attr.data-slide-to]="i" [class.active]="i==0" *ngFor="let item of banner; let i = index"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="banner-cont item" [ngClass]="{active: item.active}" *ngFor="let item of banner">
+                <div class="bg">
+                    <img [src]="item.pic">
+                </div>
+                <div class="container">
+                    <h2 [innerHTML]="item.title"></h2>
+                    <h4 [innerHTML]="item.des"></h4>
+                    <a class="btns" target="_blank" [href]="item.url">{{item.btn}}<i class="material-icons">arrow_forward</i></a>
+                    <p class="tab" *ngIf="item.tab">{{item.tab}}</p>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- end.carousel -->
+
+    <!--str start-->
+    <section class="st2">
+        <div class="container container-lg">
+            <h2>了解我們的服務</h2>
+            <ul class="items">
+                <li (click)="goService()">
+                    <div class="pic"><img src="./assets/img/map.png"></div>
+                    <div class="txt">
+                        <div class="title">服務介紹</div>
+                        <div class="sub">服務項目/服務區域/價錢說明</div>
+                    </div>
+                </li>
+                <li (click)="goVs()">
+                    <div class="pic"><img src="./assets/svg/person.svg"></div>
+                    <div class="txt">
+                        <div class="title">服務比較</div>
+                        <div class="sub">各家服務比較 / 政府規範罰則</div>
+                    </div>
+                </li>
+                <li (click)="goFee()">
+                    <div class="pic"><img src="./assets/svg/computer.svg"></div>
+                    <div class="txt">
+                        <div class="title">費用試算</div>
+                        <div class="sub">各時段的里程費用計算</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--st2 end-->
+
+    <!--st3 start-->
+    <section class="st3">
+        <div class="container container-lg">
+            <div class="instro">
+                <h2>台灣代駕全新改版</h2>
+                <h5>全新操作介面，使用更加簡便，開啟後馬上定位立即呼叫。嶄新風貌，質感躍升後更能匹配，追求時尚與優越的您！</h5>
+                <ul>
+                    <li>
+                        <div class="pic qr">
+                            <img src="./assets/img/qr.png">
+                        </div>
+                        <p>掃描 QR code立即<br>下載台灣代駕APP</p>
+                        <div class="btna lb" (click)="downloadApp()">Iphone / Andriod</div>
+                        <div class="btna sb" (click)="downloadApp()">立即下載APP</div>
+                    </li>
+                    <li>
+                        <div class="pic app">
+                            <img src="./assets/img/phone_hand.png">
+                        </div>
+                        <p>APP使用流程教學</p>
+                        <div class="btnb" (click)="openTeach()"><span>了解詳情</span> <i class="material-icons">arrow_forward</i></div>
+                        <!--<a class="btnb">了解詳情 <i class="material-icons md-dark md-inactive">face</i></a>-->
+                    </li>
+                </ul>
+            </div>
+            <div class="phone">
+                <img src="./assets/img/app-phone.png">
+            </div>
+        </div>
+    </section>
+    <!--st3 end-->
+    <!--st4 start-->
+    <section class="st4">
+        <div class="container">
+            <div class="news">
+                <div class="title">
+                    <div class="pic"><img src="./assets/svg/news.svg"></div>
+                    <h3>最新消息</h3>
+                </div>
+                <ul class="txt">
+                    <li>目前最近消息，還有優惠活動...</li>
+                    <li>尾牙抽獎名單公佈</li>
+                    <li>目前最近消息，還有優惠活動...</li>
+                </ul>
+                <div class="mbtn" (click)="newsBtn()"><span>更多消息</span><i class="material-icons">arrow_forward</i></div>
+            </div>
+            <div class="qa">
+                <div class="title">
+                    <div class="pic"><img src="./assets/svg/qa.svg"></div>
+                    <h3>常見問題</h3>
+                </div>
+                <div class="txt">
+                    關於一般問題或乘客的操作問題，您都可以在這邊找到解答。
+                </div>
+                <div class="girl"><img src="./assets/img/girl.png"></div>
+                <div class="mbtn" (click)="qaBtn()"><span>了解更多</span><i class="material-icons">arrow_forward</i></div>
+            </div>
+        </div>
+    </section>
+    <!--st4 end-->
+    <!--st5 start-->
+    <section class="st5">
+        <div class="container">
+            <h2>老客戶經驗分享</h2>
+
+            <!--<div class="arrow btn-left"><i class="material-icons">keyboard_arrow_left</i></div>
+      <div class="arrow btn-right"><i class="material-icons">keyboard_arrow_right</i></div>-->
+
+            <ul class="peo">
+                <li>
+                    <div class="pic"><img src="./assets/img/song.jpg"></div>
+                    <div class="txt">
+                        <h4 class="name">Dr. Song</h4>
+                        <div class="dis">很棒的一款APP，不僅好用方便價格也合理，司機服務很棒讓人很放心！</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="pic"><img src="./assets/img/lucy.jpg"></div>
+                    <div class="txt">
+                        <h4 class="name">Liu Lucy</h4>
+                        <div class="dis">以前在國外工作時常使用代駕APP，台灣終於有相同服務了，真的很開心！</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="pic"><img src="./assets/img/allen.jpg"></div>
+                    <div class="txt">
+                        <h4 class="name">Tsai Allen</h4>
+                        <div class="dis">因工作需要時常應酬，罰單已經不知道接過幾張了，現在終於可以不用擔心酒駕了！</div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+    <!--st5 end-->
+
+</div>
+<!--wrap end-->

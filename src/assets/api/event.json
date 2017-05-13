@@ -1,0 +1,19 @@
+{
+    "status": "1",
+    "msg": "回傳錯誤訊息",
+    "event":[
+        {
+            "pic":"./assets/img/event1.jpg",
+            "url":"http://event.twdd.com.tw/2016/",
+            "text":"立即分享得300元現金"
+        },{
+            "pic":"./assets/img/event2.jpg",
+            "url":"http://event.twdd.com.tw/xms/index",
+            "text":"開車不喝酒，喝酒找代駕"
+        },{
+            "pic":"./assets/img/event3.jpg",
+            "url":"http://event.twdd.com.tw/2017/ny/index",
+            "text":"尾牙試手氣，無料抽紅包"
+        }
+    ]
+}

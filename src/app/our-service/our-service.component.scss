@@ -1,0 +1,171 @@
+@import "./../../scss/color";
+@import "./../../scss/mixin";
+@import "./../../scss/media";
+.wrap {
+  .cont{
+    margin-top: 70px;
+    @media #{$med}{
+      margin-top: 35px;
+    }
+    @media #{$sml}{
+      margin-top: 0;
+    }
+  }
+  .st1 {
+    background-color: $sb;
+    padding-bottom: 0;
+    @media #{$sml} {
+      .cont {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+    }
+    .box {
+      align-self: center;
+      @media #{$sml} {
+        margin-bottom: 20px;
+      }
+      li {
+        margin: 0 20px;
+        padding: 30px 0;
+        display: inline-block;
+        @media #{$med} {
+          padding: 20px 0;
+        }
+        @media #{$sml} {
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          padding: 15px 0;
+        }
+        .title {
+          border-bottom: 2px solid $Blue;
+          display: inline-block;
+        }
+        .des {
+          font-size: 1.125rem;
+          margin-top: 15px;
+          line-height: 2;
+          @media #{$med} {
+            font-size: 1rem;
+          }
+          @media #{$sml} {
+            // line-height: 1.5;
+          }
+        }
+      }
+      li:nth-child(1) {
+        border-bottom: 1px solid $textGray;
+        @media #{$sml} {
+          border: 0;
+        }
+      }
+    }
+    .map {
+      align-self: flex-end;
+      @media #{$sml} {
+        margin: 15px;
+        align-self: center;
+        padding: 0 20px; // border-bottom: 1px solid $textGray;
+      }
+      img {
+        width: 100%;
+        max-width: 440px;
+      }
+    }
+  }
+  .st2 {
+    @media #{$sml} {
+      .cont {
+        display: block;
+      }
+    }
+    .ex {
+      @media #{$sml} {
+        max-width: 450px;
+        margin: 0 auto 20px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .box {
+      align-items: center;
+      @media #{$sml}{
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+      ul {
+        margin-top: 42px;
+        li {
+          margin-left: 20px;
+          line-height: 2;
+          list-style-type: decimal;
+          text-align: justify;
+        }
+        @media #{$med} {
+          margin-top: 20px;
+        }
+
+      }
+    }
+  }
+  .st3 {
+    background-color: $superLight;
+    .des {
+      font-size: 1.25rem;
+      text-align: center;
+      padding: 30px 0 0;
+      margin: 0 auto;
+      width: 70%;
+      font-weight: normal;
+      @media #{$sml} {
+        width: 100%;
+      }
+    }
+    .blue-text {
+      color: $Blue;
+      font-weight: bold;
+    }
+  }
+  .st4 {
+    .cont-form {
+      form{
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .box {
+        .title, .des, ul {
+          margin-left: 15px;
+          @media #{$sml} {
+            margin-left: 0;
+          }
+        }
+        ul {
+          li {
+            list-style-type: decimal;
+            margin-left: 20px;
+            margin-bottom: 10px;
+          }
+        }
+        .des,
+        ul {
+          flex-basis: 420px;
+          text-align: justify;
+          line-height: 1.5;
+          @media #{$sml} {
+            width: auto;
+          }
+        }
+        .des{
+          margin-bottom: 1rem;
+        }
+      }
+      .left-box{
+        flex-basis: 45%;
+      }
+    }
+  }
+}

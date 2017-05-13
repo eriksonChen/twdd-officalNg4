@@ -1,0 +1,66 @@
+@import "./../../scss/color";
+@import "./../../scss/media";
+.cont-form-login {
+  justify-content: space-around;
+  .uppercase{
+    text-transform: uppercase;
+  }
+  
+  .select {
+    align-self: flex-start;
+    .notime{
+      color: $textGray;
+      padding: 20px;
+    }
+    .days-cont {
+      .day {
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        label {
+          flex-basis: 30px;
+        }
+        input[type=radio] {
+          width: 20px;
+          height: 20px;
+          margin: 10px;
+        }
+        .date {
+          letter-spacing: 1.5px;
+          padding-left: 10px;
+          .day-title {
+            font-weight: bold;
+            font-size: 1.25rem;
+            span {
+              padding-left: 15px;
+            }
+          }
+          .tab {
+            color: $textGray;
+            font-size: 0.875rem;
+          }
+          .add {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+  @media #{$med} {
+      .box{
+          flex:1;
+      }
+  }
+  .alert{
+    border-color: red;
+  }
+  .blue {
+    color: $Blue;
+  }
+  .red {
+    color: red;
+  }
+  .green{
+    display:none;
+  }
+}

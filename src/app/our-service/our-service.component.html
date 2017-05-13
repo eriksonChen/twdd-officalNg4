@@ -1,0 +1,126 @@
+<!--wrap start-->
+<div class="wrap">
+  <!--st1 start-->
+  <section class="st1">
+    <div class="container">
+      <h2>台灣代駕服務區域</h2>
+      <div class="cont">
+        <div class="box map"><img src="./assets/img/tw.png"></div>
+        <ul class="box ">
+          <li>
+            <div class="title">台北 / 桃園</div>
+            <div class="des">
+              台北市信義路四段415號13樓之6 <br> 02-2345-5209
+            </div>
+          </li>
+          <li>
+            <div class="title">台中</div>
+            <div class="des">
+              台中市西屯區台灣大道四段771號9樓（東家大樓） <br> 02-2246-5209
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!--st1 end-->
+
+  <!--st2 start-->
+  <section class="st2">
+    <div class="container">
+      <h2>台灣代駕計費標準</h2>
+      <div class="cont">
+        <div class="box ex"><img src="./assets/img/ex.png"></div>
+        <div class="box">
+          <div class="title">
+            喝酒不開車，安全有保障<br> 讓代駕司機幫您開車，平安送您回家
+          </div>
+          <ul>
+            <li>起步價時段，依照實際出發開車時間為準。</li>
+            <li>累計里程計費，超過10公里，每1公里加收50元；行駛超過30公里後，每2公里加收50元。</li>
+            <li>等候時間滿30分鐘收費100元，30分鐘後每滿15分鐘收費50元。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--st2 end-->
+
+  <!--st3 start-->
+  <section class="st3">
+    <div class="container">
+      <h2>其他日間代駕服務</h2>
+      <p class="des">
+        除了酒後代駕之外，台灣代駕可提供多樣化的代駕服務，服務內容包括：
+      </p>
+      <p class="des blue-text">
+        商務代駕 / 旅遊代駕 / 銀髮族代駕 / 疲勞代駕 / 汽車保養代駕 / 汽車清洗美容代駕 / 代理驗車代駕 / 婚紗外拍代駕 / 婚宴禮車代駕 … 等
+      </p>
+
+    </div>
+  </section>
+  <!--st3 end-->
+
+  <!--st4 start-->
+  <section class="st4">
+    <div class="container">
+      <h2>預約服務專案</h2>
+      <div class="cont cont-form">
+        <div class="box left-box">
+          <div class="title">預約多人專案 / 鐘點代駕專案</div>
+          <div class="des">
+            如您需要於預定的時間預約多名駕駛者，歡迎您撥打24H客服專線或請您填寫預約單，由我們的客服人員盡快與您聯繫，為您做妥善安排！
+          </div>
+          <ul>
+            <li>代駕鐘點費用300元/小時，預約時間至少 5個小時起，起迄地點限為同一位置。</li>
+            <li>起迄若為不同地點，需補貼司機返程交通費，費用計算採高鐵票價計費。</li>
+            <li>開車時段若為深夜時段，PM 10 : 00 ~ AM 07 : 00鐘點費用400元/小時。</li>
+            <li>連續駕車每四個小時，需給予司機30分鐘的休息時間，遇用餐時段，請車主提供餐盒。</li>
+            <li>如連續採用多天代駕服務，每日開車上限10小時，需額外補貼住宿費及餐費。</li>
+          </ul>
+        </div>
+
+        <div class="box myform">
+          <div class="title form-title">
+            請填寫以下資料<br>本公司將提供現場代駕服務
+          </div>
+          <form role="form" [formGroup]="form" (submit)="onSubmit()">
+
+            <div class="form-group form-group-lg col-md-6 col-xs-12">
+              <label for="myname">申請人姓名</label>
+              <input type="text" class="form-control" formControlName="name" placeholder="請輸入正確姓名" >
+              <div class="errors" *ngIf="name.invalid && name.touched">此欄位必填</div>
+            </div>
+            <div class="form-group form-group-lg col-md-6 col-xs-12">
+              <label for="cell">聯絡電話</label>
+              <input type="text" class="form-control" formControlName="cell" pattern="09[0-9]{8}" placeholder="請輸入手機號碼" maxlength="10">
+              <div class="errors" *ngIf="cell.invalid && cell.touched">請填入正確手機號碼</div>
+            </div>
+            <div class="form-group form-group-lg col-xs-12">
+              <label for="add">出發地址</label>
+              <input type="text" class="form-control" formControlName="add" placeholder="請填正確地址">
+              <div class="errors" *ngIf="add.invalid && add.touched">此欄位必填</div>
+            </div>
+            <div class="form-group form-group-lg col-md-6 col-xs-12">
+              <label for="date">預約日期</label>
+              <input type="text" class="form-control date" formControlName="date" placeholder="yyyy/mm/dd" ng2-datetime-picker parse-format="YYYY/MM/DD" date-only="true" >
+              <div class="errors" *ngIf="date.invalid && date.touched">此欄位必填</div>
+            </div>
+            <div class="form-group form-group-lg col-md-6 col-xs-12">
+              <label for="num">代駕需求人數</label>
+              <input type="number" class="form-control" formControlName="num">
+              <div class="errors" *ngIf="num.invalid && num.touched">請填寫需求人數</div>
+            </div>
+            <button type="submit" [disabled]='form.invalid' class="submit-btn">資料送出</button>
+            <!--<button type="submit" class="submit-btn">資料送出</button>-->
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!--st4 end-->
+
+
+</div>
+<!--wrap end-->

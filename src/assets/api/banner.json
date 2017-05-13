@@ -1,0 +1,17 @@
+[{
+  "title": "多一次代駕<br>少一次酒駕",
+  "des": "提供全國最專業、有效率的代駕服務<br>台灣第一家，助您平安醉到家",
+  "pic": "./assets/img/banner.jpg",
+  "btn": "立即下載APP",
+  "url": "https://goo.gl/kIoR15",
+  "active": true,
+  "tab": "Iphone / Android"
+}, {
+  "title": "分享APP<br>邀請下載送折價券",
+  "des": "被邀請者享前 兩趟各100元折扣<br>邀請人享對方前 兩次使用送百元現金紅利",
+  "pic": "./assets/img/banner2.jpg",
+  "btn": "查看詳情",
+  "url": "http://event.twdd.com.tw/2016/",
+  "active": false,
+  "tab": ""
+}]

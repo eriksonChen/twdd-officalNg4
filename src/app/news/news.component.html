@@ -1,0 +1,51 @@
+<div class="wrap">
+  <section class="st-info">
+    <div class="container">
+      <!--.title-cont start-->
+      <div class="title-cont">
+        <!--title start-->
+        <div class="title tit-pic">
+          <div class="pic"><img src="./assets/img/event.png" alt="event"></div>
+          <h3>最新活動</h3>
+        </div>
+        <!--title end-->
+      </div>
+      <!--title-con end-->
+      <!--event-cont start-->
+      <ul class="event-cont">
+        <li *ngFor="let event of events">
+          <a [href]="event.url" target="_blank">
+            <div class="pic"><img [src]="event.pic"></div>
+            <div class="txt">{{event.text}}</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="st-info">
+    <div class="container">
+      <!--.title-cont start-->
+      <div class="title-cont">
+        <!--title start-->
+        <div class="title tit-pic">
+          <div class="pic"><img src="./assets/img/news.png" alt="event"></div>
+          <h3>最新消息</h3>
+        </div>
+        <!--title end-->
+      </div>
+      <!--title-con end-->
+      <!--event-cont start-->
+      <ul class="info-cont">
+        <li class="news" *ngFor="let news of news">
+          <div class="date">{{news.date}}</div>
+          <div class="txt-cont">
+            <div class="title" (click)="news.open=!news.open">{{news.title}}</div>
+            <div class="des" [ngClass]="{open: news.open}" [innerHTML]="news.des"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</div>

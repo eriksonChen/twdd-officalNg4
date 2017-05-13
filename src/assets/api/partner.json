@@ -1,0 +1,33 @@
+{
+    "store":[
+        {
+            "pic":"./assets/img/s1.jpg"
+        },
+        {
+            "pic":"./assets/img/s2.jpg"
+        },
+        {
+            "pic":"./assets/img/s3.jpg"
+        },
+        {
+            "pic":"./assets/img/s4.jpg"
+        },
+        {
+            "pic":"./assets/img/s5.jpg"
+        },
+        {
+            "pic":"./assets/img/s6.jpg"
+        },
+        {
+            "pic":"./assets/img/s7.jpg"
+        },
+        {
+            "pic":"./assets/img/s8.jpg"
+        },
+        {
+            "pic":"./assets/img/s9.jpg"
+        }
+    ],
+    "partner":[
+    ]
+}
